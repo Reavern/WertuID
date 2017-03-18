@@ -19,9 +19,14 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         googleMapView.camera = GMSCameraPosition.camera(withLatitude: -6.1745, longitude: 106.8227, zoom: 6.0)
-        googleMapView.selectedMarker?.position = CLLocationCoordinate2DMake(-6.1745, 106.8227)
-        googleMapView.selectedMarker?.title = "Jakarta"
-        googleMapView.selectedMarker?.snippet = "Indonesia"
+        
+        
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(-6.1745, 106.8227)
+        marker.title = "Jakarta"
+        marker.snippet = "Indonesia"
+        marker.map = googleMapView
 
     }
 
