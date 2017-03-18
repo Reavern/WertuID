@@ -24,10 +24,9 @@ class MapViewController: UIViewController {
     }
 
     func updateMap() {
-        //View
-        googleMapView.camera = GMSCameraPosition.camera(withLatitude: mapData.latitude, longitude: mapData.longitude, zoom: 15.0)
+        googleMapView.camera = GMSCameraPosition.camera(withLatitude: mapData.latitude, longitude: mapData.longitude, zoom: 5)
+        googleMapView.animate(toZoom: 15)
         
-        //Marker
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2DMake(mapData.latitude, mapData.longitude)
         marker.title = mapData.city + ", " + mapData.country

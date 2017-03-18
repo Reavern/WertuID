@@ -16,7 +16,6 @@ class MapDataModel {
     private var _latitude: Double?
     private var _longitude: Double?
     private var url: String?
-    typealias JSONStandart = Dictionary<String, AnyObject>
     
     init(inURL:String) {
         self.url = inURL
@@ -52,14 +51,14 @@ class MapDataModel {
             if let error = response.result.error {
                 print(error)
             }
-
-            if let dict = response.result.value as? JSONStandart , let country = dict["country"] as? String, let city = dict["city"] as? String, let location = dict["location"] as? String, let latitude = dict["latitude"] as? Double, let longitude = dict["longitude"] as? Double {
-
-                self._country = country
-                self._city = city
-                self._location = location
-                self._latitude = latitude
-                self._longitude = longitude
+            if let value = response.result.value {
+                for data in value as! [[String:AnyObject]] {
+                    self._country = data["country"] as? String
+                    self._city = data["city"] as? String
+                    self._location = data["location"] as? String
+                    self._latitude = data["latitude"]?.doubleValue
+                    self._longitude = data["longitude"]?.doubleValue
+                }
             }
             completed()
         }

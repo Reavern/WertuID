@@ -10,5 +10,6 @@ import UIKit
 
 class ListHeader: UICollectionReusableView {
     
+    @IBOutlet weak var headLabel: UILabel!
     
 }
