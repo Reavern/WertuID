@@ -11,25 +11,29 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
 
-
     @IBOutlet weak var googleMapView: GMSMapView!
-
+    var mapData = MapDataModel(inURL: "http://reavern.esy.es/JSON/wertu_test/index.php")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        googleMapView.camera = GMSCameraPosition.camera(withLatitude: -6.1745, longitude: 106.8227, zoom: 6.0)
-        
-        
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(-6.1745, 106.8227)
-        marker.title = "Jakarta"
-        marker.snippet = "Indonesia"
-        marker.map = googleMapView
+        mapData.downloadData {
+            self.updateMap()
+        }
+
 
     }
 
+    func updateMap() {
+        //View
+        googleMapView.camera = GMSCameraPosition.camera(withLatitude: mapData.latitude, longitude: mapData.longitude, zoom: 15.0)
+        
+        //Marker
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(mapData.latitude, mapData.longitude)
+        marker.title = mapData.city + ", " + mapData.country
+        marker.snippet = mapData.location
+        marker.map = googleMapView
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
