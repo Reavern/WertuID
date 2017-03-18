@@ -11,12 +11,12 @@
 		25F7FF37F77ABA9419AECEAF /* Pods_WertuIDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C653503388567766B88F6561 /* Pods_WertuIDUITests.framework */; };
 		97F33D526119DBA6DBE074B1 /* Pods_WertuID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F65D754B7653056D2A3E518 /* Pods_WertuID.framework */; };
 		E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191791E7D0F1300FD347E /* AppDelegate.swift */; };
-		E5C1917C1E7D0F1300FD347E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1917B1E7D0F1300FD347E /* ViewController.swift */; };
 		E5C1917F1E7D0F1300FD347E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C1917D1E7D0F1300FD347E /* Main.storyboard */; };
 		E5C191811E7D0F1300FD347E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5C191801E7D0F1300FD347E /* Assets.xcassets */; };
 		E5C191841E7D0F1300FD347E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5C191821E7D0F1300FD347E /* LaunchScreen.storyboard */; };
 		E5C1918F1E7D0F1300FD347E /* WertuIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1918E1E7D0F1300FD347E /* WertuIDTests.swift */; };
 		E5C1919A1E7D0F1300FD347E /* WertuIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */; };
+		E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191A71E7D20B500FD347E /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +48,6 @@
 		C653503388567766B88F6561 /* Pods_WertuIDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WertuIDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C191761E7D0F1200FD347E /* WertuID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WertuID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C191791E7D0F1300FD347E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E5C1917B1E7D0F1300FD347E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5C1917E1E7D0F1300FD347E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5C191801E7D0F1300FD347E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5C191831E7D0F1300FD347E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		E5C191951E7D0F1300FD347E /* WertuIDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WertuIDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WertuIDUITests.swift; sourceTree = "<group>"; };
 		E5C1919B1E7D0F1300FD347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5C191A71E7D20B500FD347E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				E5C191791E7D0F1300FD347E /* AppDelegate.swift */,
-				E5C1917B1E7D0F1300FD347E /* ViewController.swift */,
 				E5C1917D1E7D0F1300FD347E /* Main.storyboard */,
 				E5C191801E7D0F1300FD347E /* Assets.xcassets */,
 				E5C191821E7D0F1300FD347E /* LaunchScreen.storyboard */,
+				E5C191A71E7D20B500FD347E /* MapViewController.swift */,
 				E5C191851E7D0F1300FD347E /* Info.plist */,
 			);
 			path = WertuID;
@@ -446,8 +446,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5C1917C1E7D0F1300FD347E /* ViewController.swift in Sources */,
 				E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */,
+				E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,6 +696,7 @@
 				E5C191A01E7D0F1300FD347E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C191A11E7D0F1300FD347E /* Build configuration list for PBXNativeTarget "WertuIDTests" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +705,7 @@
 				E5C191A31E7D0F1300FD347E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5C191A41E7D0F1300FD347E /* Build configuration list for PBXNativeTarget "WertuIDUITests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +714,7 @@
 				E5C191A61E7D0F1300FD347E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
