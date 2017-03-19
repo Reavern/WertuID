@@ -15,11 +15,8 @@ class MapDataModel {
     private var _location: String?
     private var _latitude: Double?
     private var _longitude: Double?
-    private var url: String?
+    private var url: URL?
     
-    init(inURL:String) {
-        self.url = inURL
-    }
     
     var country: String {
         return _country ?? "#"
@@ -41,11 +38,13 @@ class MapDataModel {
         return _longitude ?? 0
     }
 
+    func change(inUrl: URL) -> () {
+        url = inUrl
+    }
     
     func downloadData(completed: @escaping ()-> ()) {
         
-        let reqURL = URL(string: url!)
-        Alamofire.request(reqURL!).responseJSON {
+        Alamofire.request(url!).responseJSON {
             response in
             
             if let error = response.result.error {

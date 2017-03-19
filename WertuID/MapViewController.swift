@@ -12,15 +12,21 @@ import GoogleMaps
 class MapViewController: UIViewController {
 
     @IBOutlet weak var googleMapView: GMSMapView!
-    var mapData = MapDataModel(inURL: "http://reavern.esy.es/JSON/wertu_test/index.php")
-
+    
+    var temp: URL!
+   
+    
+    
+    var mapData = MapDataModel()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapData.downloadData {
+
+        self.mapData.change(inUrl: temp)
+        self.mapData.downloadData {
             self.updateMap()
         }
-
-
     }
 
     func updateMap() {
@@ -28,6 +34,7 @@ class MapViewController: UIViewController {
         googleMapView.animate(toZoom: 15)
         
         let marker = GMSMarker()
+        print(mapData.latitude)
         marker.position = CLLocationCoordinate2DMake(mapData.latitude, mapData.longitude)
         marker.title = mapData.city + ", " + mapData.country
         marker.snippet = mapData.location
