@@ -10,5 +10,53 @@ import Foundation
 import Alamofire
 
 class ListDataModel {
+    private var _country: String?
+    private var _city: String?
+    private var _location: String?
+    private var _latitude: Double?
+    private var _longitude: Double?
+    let url = URL(string: "http://reavern.esy.es/JSON/wertu_list/index.php")
+    
+    var country: String {
+        return _country ?? "#"
+    }
+    
+    var city: String {
+        return _city ?? "#"
+    }
+    
+    var location: String {
+        return _location ?? "#"
+    }
+    
+    var latitude: Double {
+        return _latitude ?? 0
+    }
+    
+    var longitude: Double {
+        return _longitude ?? 0
+    }
+    
+    
+    func downloadData(completed: @escaping ()-> ()) {
+
+        Alamofire.request(url!).responseJSON {
+            response in
+            
+            if let error = response.result.error {
+                print(error)
+            }
+            if let value = response.result.value {
+                for data in value as! [[String:AnyObject]] {
+                    self._country = data["country"] as? String
+                    self._city = data["city"] as? String
+                    self._location = data["location"] as? String
+                    self._latitude = data["latitude"]?.doubleValue
+                    self._longitude = data["longitude"]?.doubleValue
+                }
+            }
+            completed()
+        }
+    }
     
 }

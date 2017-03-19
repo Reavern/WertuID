@@ -10,6 +10,7 @@ import UIKit
 
 class ListCell: UICollectionViewCell {
     
-    
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var coordinateLabel: UILabel!
     
 }

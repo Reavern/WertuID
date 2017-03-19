@@ -22,6 +22,7 @@
 		E5C1918F1E7D0F1300FD347E /* WertuIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1918E1E7D0F1300FD347E /* WertuIDTests.swift */; };
 		E5C1919A1E7D0F1300FD347E /* WertuIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */; };
 		E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191A71E7D20B500FD347E /* MapViewController.swift */; };
+		E5D3CCB91E7E7D12007813F4 /* CountListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D3CCB81E7E7D12007813F4 /* CountListDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WertuIDUITests.swift; sourceTree = "<group>"; };
 		E5C1919B1E7D0F1300FD347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C191A71E7D20B500FD347E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E5D3CCB81E7E7D12007813F4 /* CountListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountListDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			children = (
 				E577CD581E7D6105004E3F40 /* ListDataModel.swift */,
 				E577CD5A1E7D6136004E3F40 /* MapDataModel.swift */,
+				E5D3CCB81E7E7D12007813F4 /* CountListDataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */,
 				E577CD551E7D5F8B004E3F40 /* ListCell.swift in Sources */,
 				E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */,
+				E5D3CCB91E7E7D12007813F4 /* CountListDataModel.swift in Sources */,
 				E577CD591E7D6105004E3F40 /* ListDataModel.swift in Sources */,
 				E577CD5B1E7D6136004E3F40 /* MapDataModel.swift in Sources */,
 				E577CD571E7D5FE9004E3F40 /* ListHeader.swift in Sources */,
