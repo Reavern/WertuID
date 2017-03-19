@@ -25,9 +25,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var tempCount = 0
     var temp = ""
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,8 +37,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-
-
     
     func setData() {
         self.country = list.country
