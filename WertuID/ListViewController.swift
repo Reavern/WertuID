@@ -66,6 +66,13 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return Int(count[section])!
     }
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ListHeader
+        sectionHeader.headLabel.text = cityCount[indexPath.section]
+        
+        return sectionHeader
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ListCell
          

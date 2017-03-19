@@ -28,11 +28,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Travel Dictionary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wuG-mC-Q3s">
+                                <rect key="frame" x="16" y="370" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wuG-mC-Q3s" firstAttribute="top" secondItem="wCH-GX-s8c" secondAttribute="bottom" constant="8" id="22g-0R-EiN"/>
+                            <constraint firstItem="wuG-mC-Q3s" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="Xgb-ho-G7H"/>
                             <constraint firstItem="wCH-GX-s8c" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="fBN-jh-4K9"/>
                             <constraint firstItem="wCH-GX-s8c" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="g2d-Q5-AZF"/>
+                            <constraint firstItem="wuG-mC-Q3s" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="jLn-Ko-nrY"/>
                             <constraint firstItem="wCH-GX-s8c" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jte-bg-0Ef"/>
                         </constraints>
                     </view>

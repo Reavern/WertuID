@@ -56,7 +56,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="nnO-Sd-wRJ" customClass="ListCell" customModule="WertuID" customModuleProvider="target">
-                                        <rect key="frame" x="11.5" y="50" width="352" height="78"/>
+                                        <rect key="frame" x="12" y="50" width="352" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="352" height="78"/>
@@ -84,7 +84,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sdz-Zf-ckt" customClass="ListHeader" customModule="WertuID" customModuleProvider="target">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="header" id="sdz-Zf-ckt" customClass="ListHeader" customModule="WertuID" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -97,7 +97,7 @@
                                         </label>
                                     </subviews>
                                     <connections>
-                                        <outlet property="headLabel" destination="fEB-HM-Avn" id="ooE-hq-AfR"/>
+                                        <outlet property="headLabel" destination="fEB-HM-Avn" id="F9t-8U-J02"/>
                                     </connections>
                                 </collectionReusableView>
                                 <connections>
@@ -184,7 +184,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOk-CT-kD6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="EIk-PV-GtE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hwo-2n-k23">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hwo-2n-k23">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
