@@ -10,9 +10,8 @@
 		0AAB3B0D1D5BB5C62723DFE4 /* Pods_WertuIDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A4E870E8E9522D01935C39B /* Pods_WertuIDTests.framework */; };
 		25F7FF37F77ABA9419AECEAF /* Pods_WertuIDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C653503388567766B88F6561 /* Pods_WertuIDUITests.framework */; };
 		97F33D526119DBA6DBE074B1 /* Pods_WertuID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F65D754B7653056D2A3E518 /* Pods_WertuID.framework */; };
+		E56F1D8C1E7EE92B000B9C55 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56F1D8B1E7EE92B000B9C55 /* TableCell.swift */; };
 		E577CD501E7D5E89004E3F40 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577CD4F1E7D5E89004E3F40 /* ListViewController.swift */; };
-		E577CD551E7D5F8B004E3F40 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577CD541E7D5F8B004E3F40 /* ListCell.swift */; };
-		E577CD571E7D5FE9004E3F40 /* ListHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577CD561E7D5FE9004E3F40 /* ListHeader.swift */; };
 		E577CD591E7D6105004E3F40 /* ListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577CD581E7D6105004E3F40 /* ListDataModel.swift */; };
 		E577CD5B1E7D6136004E3F40 /* MapDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E577CD5A1E7D6136004E3F40 /* MapDataModel.swift */; };
 		E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191791E7D0F1300FD347E /* AppDelegate.swift */; };
@@ -51,9 +50,8 @@
 		976AA68418A464D7121EC69D /* Pods-WertuIDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WertuIDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WertuIDUITests/Pods-WertuIDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		987C4069765C9628D13CF741 /* Pods-WertuID.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WertuID.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WertuID/Pods-WertuID.debug.xcconfig"; sourceTree = "<group>"; };
 		C653503388567766B88F6561 /* Pods_WertuIDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WertuIDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E56F1D8B1E7EE92B000B9C55 /* TableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		E577CD4F1E7D5E89004E3F40 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		E577CD541E7D5F8B004E3F40 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		E577CD561E7D5FE9004E3F40 /* ListHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListHeader.swift; sourceTree = "<group>"; };
 		E577CD581E7D6105004E3F40 /* ListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataModel.swift; sourceTree = "<group>"; };
 		E577CD5A1E7D6136004E3F40 /* MapDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDataModel.swift; sourceTree = "<group>"; };
 		E5C191761E7D0F1200FD347E /* WertuID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WertuID.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +132,7 @@
 		E577CD521E7D5F34004E3F40 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E577CD541E7D5F8B004E3F40 /* ListCell.swift */,
-				E577CD561E7D5FE9004E3F40 /* ListHeader.swift */,
+				E56F1D8B1E7EE92B000B9C55 /* TableCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -485,12 +482,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E56F1D8C1E7EE92B000B9C55 /* TableCell.swift in Sources */,
 				E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */,
-				E577CD551E7D5F8B004E3F40 /* ListCell.swift in Sources */,
 				E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */,
 				E577CD591E7D6105004E3F40 /* ListDataModel.swift in Sources */,
 				E577CD5B1E7D6136004E3F40 /* MapDataModel.swift in Sources */,
-				E577CD571E7D5FE9004E3F40 /* ListHeader.swift in Sources */,
 				E577CD501E7D5E89004E3F40 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

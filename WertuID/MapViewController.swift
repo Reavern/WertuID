@@ -34,7 +34,6 @@ class MapViewController: UIViewController {
         googleMapView.animate(toZoom: 15)
         
         let marker = GMSMarker()
-        print(mapData.latitude)
         marker.position = CLLocationCoordinate2DMake(mapData.latitude, mapData.longitude)
         marker.title = mapData.city + ", " + mapData.country
         marker.snippet = mapData.location

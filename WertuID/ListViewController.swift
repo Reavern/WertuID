@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     var list = ListDataModel(inURL: "")
     var country = [String]()
     var city = [String]()
@@ -34,7 +36,7 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self.setData()
             self.list.countData {
                 self.setCount()
-                self.collectionView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
@@ -58,24 +60,21 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return cityCount.count
     }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Int(count[section])!
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ListHeader
-        sectionHeader.headLabel.text = cityCount[indexPath.section]
-        
-        return sectionHeader
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return cityCount[section]
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ListCell
-         
+ 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableCell
+        
         if indexPath.section != 0 {
             tempCount = 0
             for number in 0...indexPath.section - 1 {
@@ -83,14 +82,14 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
             
         }
-
+    
         cell.locationLabel.text = location[indexPath.row + tempCount]
         cell.coordinateLabel.text = latitude[indexPath.row + tempCount] + ", " + longitude[indexPath.row + tempCount]
         
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.section != 0 {
             tempCount = 0
@@ -102,8 +101,8 @@ class ListViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         temp = "http://reavern.esy.es/JSON/wertu_map/" + location[indexPath.row + tempCount] + "/index.php"
         performSegue(withIdentifier: "mapSegue", sender: self)
-
     }
+
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
