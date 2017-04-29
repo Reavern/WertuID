@@ -54,7 +54,7 @@ class MapDataModel {
                 for data in value as! [[String:AnyObject]] {
                     self._country = data["country"] as? String
                     self._city = data["city"] as? String
-                    self._location = data["location"] as? String
+                    self._location = data["loc_name"] as? String
                     self._latitude = data["latitude"]?.doubleValue
                     self._longitude = data["longitude"]?.doubleValue
                 }

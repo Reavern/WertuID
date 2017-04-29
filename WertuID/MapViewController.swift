@@ -13,6 +13,8 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var googleMapView: GMSMapView!
     
+    @IBOutlet weak var coordinateLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     var temp: URL!
    
     
@@ -26,9 +28,15 @@ class MapViewController: UIViewController {
         self.mapData.change(inUrl: temp)
         self.mapData.downloadData {
             self.updateMap()
+            self.UpdateUI()
         }
     }
 
+    func UpdateUI() {
+        cityLabel.text = mapData.city + ", " + mapData.country
+        coordinateLabel.text = "lat: " + String(mapData.latitude) + ", long: " + String(mapData.longitude)
+    }
+    
     func updateMap() {
         googleMapView.camera = GMSCameraPosition.camera(withLatitude: mapData.latitude, longitude: mapData.longitude, zoom: 5)
         googleMapView.animate(toZoom: 15)
@@ -43,6 +51,7 @@ class MapViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
 
     /*

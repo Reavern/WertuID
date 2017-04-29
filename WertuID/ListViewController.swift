@@ -69,9 +69,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
  
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableCell
-        
+        tempCount = 0
         if indexPath.section != 0 {
-            tempCount = 0
             for number in 0...indexPath.section - 1 {
                 tempCount = tempCount + Int(count[number])!
             }
@@ -85,16 +84,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        tempCount = 0
         if indexPath.section != 0 {
-            tempCount = 0
             for number in 0...indexPath.section - 1 {
                 tempCount = tempCount + Int(count[number])!
             }
             
         }
         
-        temp = "http://reavern.esy.es/JSON/wertu_map/" + location[indexPath.row + tempCount] + "/index.php"
+        temp = "http://api.farells.com/JSON/wertu_map/" + location[indexPath.row + tempCount] + "/index.php"
         performSegue(withIdentifier: "mapSegue", sender: self)
     }
 

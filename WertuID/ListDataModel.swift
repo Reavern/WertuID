@@ -17,11 +17,11 @@ class ListDataModel {
     private var _longitude: [String] = []
     private var _cityCount: [String] = []
     private var _count: [String] = []
-    let url_count = URL(string: "http://reavern.esy.es/JSON/wertu_count/index.php")
+    let url_count = URL(string: "http://api.farells.com/JSON/wertu_count/index.php")
     var url = ""
  
     init(inURL: String) {
-        url = "http://reavern.esy.es/JSON/wertu_list/" + inURL + "index.php"
+        url = "http://api.farells.com/JSON/wertu_list/" + inURL + "index.php"
     }
     
     var country: [String] {
@@ -65,7 +65,7 @@ class ListDataModel {
                 for data in value as! [[String:AnyObject]] {
                     self._country.append((data["country"] as? String)!)
                     self._city.append((data["city"] as? String)!)
-                    self._location.append((data["location"] as? String)!)
+                    self._location.append((data["loc_name"] as? String)!)
                     self._latitude.append((data["latitude"] as? String)!)
                     self._longitude.append((data["longitude"] as? String)!)
                 }
