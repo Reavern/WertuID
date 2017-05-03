@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -27,13 +28,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        SVProgressHUD.show()
         tempCount = 0
+        
         list.downloadData {
             self.setData()
             self.list.countData {
                 self.setCount()
                 self.tableView.reloadData()
+                SVProgressHUD.dismiss()
             }
         }
     }

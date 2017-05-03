@@ -21,6 +21,8 @@
 		E5C1918F1E7D0F1300FD347E /* WertuIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1918E1E7D0F1300FD347E /* WertuIDTests.swift */; };
 		E5C1919A1E7D0F1300FD347E /* WertuIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */; };
 		E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191A71E7D20B500FD347E /* MapViewController.swift */; };
+		E5F931391EBA21A30066F26B /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F931381EBA21A30066F26B /* FavouritesViewController.swift */; };
+		E5F9313B1EBA47A60066F26B /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WertuIDUITests.swift; sourceTree = "<group>"; };
 		E5C1919B1E7D0F1300FD347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C191A71E7D20B500FD347E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E5F931381EBA21A30066F26B /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				E56F1D8B1E7EE92B000B9C55 /* TableCell.swift */,
+				E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			children = (
 				E5C191A71E7D20B500FD347E /* MapViewController.swift */,
 				E577CD4F1E7D5E89004E3F40 /* ListViewController.swift */,
+				E5F931381EBA21A30066F26B /* FavouritesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -485,8 +491,10 @@
 				E56F1D8C1E7EE92B000B9C55 /* TableCell.swift in Sources */,
 				E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */,
 				E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */,
+				E5F9313B1EBA47A60066F26B /* FavouriteCell.swift in Sources */,
 				E577CD591E7D6105004E3F40 /* ListDataModel.swift in Sources */,
 				E577CD5B1E7D6136004E3F40 /* MapDataModel.swift in Sources */,
+				E5F931391EBA21A30066F26B /* FavouritesViewController.swift in Sources */,
 				E577CD501E7D5E89004E3F40 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
