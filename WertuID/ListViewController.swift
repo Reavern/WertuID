@@ -28,6 +28,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.removeObject(forKey: "FAV") // Remove kalo udh mau deploy
         SVProgressHUD.show()
         tempCount = 0
         

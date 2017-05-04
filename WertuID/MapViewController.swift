@@ -13,9 +13,11 @@ import SVProgressHUD
 class MapViewController: UIViewController {
 
     @IBOutlet weak var googleMapView: GMSMapView!
-    
     @IBOutlet weak var coordinateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    
+    
     var temp: URL!
     var mapData = MapDataModel()
     var fav = [String]()
@@ -34,6 +36,7 @@ class MapViewController: UIViewController {
 
     func UpdateUI() {
         cityLabel.text = mapData.city + ", " + mapData.country
+        locationLabel.text = mapData.location
         coordinateLabel.text = "lat: " + String(mapData.latitude) + ", long: " + String(mapData.longitude)
     }
     
@@ -49,25 +52,23 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func addToFavouritesButton(_ sender: Any) {
-        let check = String(describing: temp)
+        let check = locationLabel.text
         if let data = UserDefaults.standard.object(forKey: "FAV") as? [String]{
-            if !data.contains(check) {
-                print("B")
+            if !data.contains(check!) {
                 fav = data
-                fav.append(check)
+                fav.append(check!)
                 UserDefaults.standard.set(fav, forKey: "FAV")
             }
-            
         }
-        else {print("C")
-            fav.append(check)
+        else {
+            fav.append(check!)
             UserDefaults.standard.set(fav, forKey: "FAV")
         }
-        
+
     }
     
     
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

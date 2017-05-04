@@ -12,7 +12,7 @@ import SVProgressHUD
 class FavouritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var fav = [String]()
-    var temp: URL!
+    var temp = ""
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -22,11 +22,11 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+
         SVProgressHUD.show()
         if let data = UserDefaults.standard.object(forKey: "FAV") as? [String] {
-            fav = data as! [String]
+            fav = data
             tableView.reloadData()
-            
         }
         SVProgressHUD.dismiss()
     }
@@ -41,13 +41,13 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FavouriteCell
-        cell.locationLabel.text = String(describing: fav[indexPath.row])
+        cell.locationLabel.text = fav[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        temp = URL(string: fav[indexPath.row])
+        temp = "http://api.farells.com/JSON/wertu_map/" + fav[indexPath.row] + "/index.php"
         performSegue(withIdentifier: "favToMapSegue", sender: nil)
     }
     
@@ -55,7 +55,7 @@ class FavouritesViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let next = segue.destination as! MapViewController
-        next.temp = temp
+        next.temp = URL(string: temp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     }
     
 
