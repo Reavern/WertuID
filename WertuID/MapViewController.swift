@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     
+    var nextTemp = ""
     
     var temp: URL!
     var mapData = MapDataModel()
@@ -67,13 +68,27 @@ class MapViewController: UIViewController {
 
     }
     
-    
+    @IBAction func revButton(_ sender: Any) {
+        nextTemp = "http://api.farells.com/JSON/wertu_review/" + locationLabel.text! + "/index.php"
+        performSegue(withIdentifier: "reviewsSegue", sender: self)
+    }
 
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as! ReviewsViewController
+        print(nextTemp)
+        next.temp = URL(string: nextTemp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+    }
 
 }

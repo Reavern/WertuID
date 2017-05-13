@@ -21,6 +21,9 @@
 		E5C1918F1E7D0F1300FD347E /* WertuIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C1918E1E7D0F1300FD347E /* WertuIDTests.swift */; };
 		E5C1919A1E7D0F1300FD347E /* WertuIDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */; };
 		E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C191A71E7D20B500FD347E /* MapViewController.swift */; };
+		E5D666A11EC6A318002989B6 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D666A01EC6A318002989B6 /* ReviewsViewController.swift */; };
+		E5D666A31EC6A585002989B6 /* ReviewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D666A21EC6A585002989B6 /* ReviewDataModel.swift */; };
+		E5D666A51EC6A922002989B6 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D666A41EC6A922002989B6 /* ChatCell.swift */; };
 		E5F931391EBA21A30066F26B /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F931381EBA21A30066F26B /* FavouritesViewController.swift */; };
 		E5F9313B1EBA47A60066F26B /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		E5C191991E7D0F1300FD347E /* WertuIDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WertuIDUITests.swift; sourceTree = "<group>"; };
 		E5C1919B1E7D0F1300FD347E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5C191A71E7D20B500FD347E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		E5D666A01EC6A318002989B6 /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		E5D666A21EC6A585002989B6 /* ReviewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewDataModel.swift; sourceTree = "<group>"; };
+		E5D666A41EC6A922002989B6 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		E5F931381EBA21A30066F26B /* FavouritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +135,7 @@
 			children = (
 				E577CD581E7D6105004E3F40 /* ListDataModel.swift */,
 				E577CD5A1E7D6136004E3F40 /* MapDataModel.swift */,
+				E5D666A21EC6A585002989B6 /* ReviewDataModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 			children = (
 				E56F1D8B1E7EE92B000B9C55 /* TableCell.swift */,
 				E5F9313A1EBA47A60066F26B /* FavouriteCell.swift */,
+				E5D666A41EC6A922002989B6 /* ChatCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 				E5C191A71E7D20B500FD347E /* MapViewController.swift */,
 				E577CD4F1E7D5E89004E3F40 /* ListViewController.swift */,
 				E5F931381EBA21A30066F26B /* FavouritesViewController.swift */,
+				E5D666A01EC6A318002989B6 /* ReviewsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -489,9 +498,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E56F1D8C1E7EE92B000B9C55 /* TableCell.swift in Sources */,
+				E5D666A31EC6A585002989B6 /* ReviewDataModel.swift in Sources */,
+				E5D666A51EC6A922002989B6 /* ChatCell.swift in Sources */,
 				E5C1917A1E7D0F1300FD347E /* AppDelegate.swift in Sources */,
 				E5C191A81E7D20B500FD347E /* MapViewController.swift in Sources */,
 				E5F9313B1EBA47A60066F26B /* FavouriteCell.swift in Sources */,
+				E5D666A11EC6A318002989B6 /* ReviewsViewController.swift in Sources */,
 				E577CD591E7D6105004E3F40 /* ListDataModel.swift in Sources */,
 				E577CD5B1E7D6136004E3F40 /* MapDataModel.swift in Sources */,
 				E5F931391EBA21A30066F26B /* FavouritesViewController.swift in Sources */,

@@ -11,10 +11,7 @@ import SVProgressHUD
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    
-    
     @IBOutlet weak var tableView: UITableView!
-    
     var list = ListDataModel(inURL: "")
     var country = [String]()
     var city = [String]()
@@ -23,11 +20,21 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     var longitude = [String]()
     var cityCount = [String]()
     var count = [String]()
+    var filter = [String]()
     var tempCount = 0
     var temp = ""
     
+    func filterContentForSearchText(searchText: String, scopre: String = "All") {
+        filter = location.filter {
+            fil in
+            return fil.localizedLowercase.contains(searchText.localizedLowercase)
+        }
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         UserDefaults.standard.removeObject(forKey: "FAV") // Remove kalo udh mau deploy
         SVProgressHUD.show()
         tempCount = 0
