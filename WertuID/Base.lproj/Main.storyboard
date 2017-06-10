@@ -35,7 +35,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4ew-hX-an8" id="5Cn-gd-nfn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozF-we-cG1">
@@ -131,10 +131,9 @@
                                     <action selector="addToFavouritesButton:" destination="Efv-Zh-p0x" eventType="touchUpInside" id="Fem-TJ-8CW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeW-f2-gEl">
-                                <rect key="frame" x="16" y="580" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeW-f2-gEl">
+                                <rect key="frame" x="16" y="617" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButton:" destination="Efv-Zh-p0x" eventType="touchUpInside" id="70a-rD-88c"/>
                                 </connections>
@@ -144,6 +143,7 @@
                         <constraints>
                             <constraint firstItem="Mq3-U5-SiV" firstAttribute="leading" secondItem="hck-vb-gvJ" secondAttribute="leading" id="1Hd-N1-sEx"/>
                             <constraint firstItem="Mq3-U5-SiV" firstAttribute="trailing" secondItem="hck-vb-gvJ" secondAttribute="trailing" id="3Jv-S1-PU9"/>
+                            <constraint firstAttribute="bottom" secondItem="HeW-f2-gEl" secondAttribute="bottom" constant="20" symbolic="YES" id="7uN-S8-V5g"/>
                             <constraint firstItem="9Wo-Ze-VLc" firstAttribute="top" secondItem="Yxu-2E-rte" secondAttribute="bottom" constant="8" symbolic="YES" id="9dZ-zb-d1d"/>
                             <constraint firstAttribute="trailing" secondItem="a2c-Qz-NLh" secondAttribute="trailing" id="Gl7-iw-Knc"/>
                             <constraint firstItem="Yxu-2E-rte" firstAttribute="trailing" secondItem="9Wo-Ze-VLc" secondAttribute="trailing" id="Lf8-JN-B3E"/>
@@ -152,6 +152,7 @@
                             <constraint firstItem="PuX-Xk-47d" firstAttribute="top" secondItem="9Wo-Ze-VLc" secondAttribute="bottom" constant="162" id="UpX-Qd-2tu"/>
                             <constraint firstItem="Mq3-U5-SiV" firstAttribute="top" secondItem="a2c-Qz-NLh" secondAttribute="bottom" constant="8" symbolic="YES" id="ddj-B6-bL3"/>
                             <constraint firstItem="hck-vb-gvJ" firstAttribute="leading" secondItem="Yxu-2E-rte" secondAttribute="leading" id="epm-ce-VRE"/>
+                            <constraint firstItem="HeW-f2-gEl" firstAttribute="leading" secondItem="Yxu-2E-rte" secondAttribute="leading" id="f7b-n1-OPV"/>
                             <constraint firstItem="Yxu-2E-rte" firstAttribute="top" secondItem="hck-vb-gvJ" secondAttribute="bottom" constant="8" symbolic="YES" id="fxP-zL-yXP"/>
                             <constraint firstItem="Yxu-2E-rte" firstAttribute="top" secondItem="Mq3-U5-SiV" secondAttribute="bottom" constant="57" id="gsz-yT-UN1"/>
                             <constraint firstItem="a2c-Qz-NLh" firstAttribute="leading" secondItem="dkw-o1-HIm" secondAttribute="leading" id="jyM-3V-WjN"/>
@@ -163,15 +164,16 @@
                     <connections>
                         <outlet property="cityLabel" destination="hck-vb-gvJ" id="7LK-g9-jOW"/>
                         <outlet property="coordinateLabel" destination="Yxu-2E-rte" id="fVC-sX-sOa"/>
+                        <outlet property="favButton" destination="9Wo-Ze-VLc" id="eVP-H1-BRg"/>
                         <outlet property="googleMapView" destination="a2c-Qz-NLh" id="CfU-IU-loo"/>
                         <outlet property="locationLabel" destination="Mq3-U5-SiV" id="jwM-uV-Ocq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avW-L3-zuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3768.8000000000002" y="-438.53073463268368"/>
+            <point key="canvasLocation" x="3743" y="-109"/>
         </scene>
-        <!--Item-->
+        <!--Favourites-->
         <scene sceneID="Y8n-wl-Rgb">
             <objects>
                 <viewController id="aOs-fp-nNr" customClass="FavouritesViewController" customModule="WertuID" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,7 +193,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LvC-Tc-gmx" id="XQ4-lz-Xst">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cm1-84-FIj">
@@ -222,7 +224,7 @@
                             <constraint firstItem="GI9-Kb-aTz" firstAttribute="leading" secondItem="tDH-QU-gKo" secondAttribute="leading" id="gsI-dU-D7d"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="amK-TF-ycv"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" id="amK-TF-ycv"/>
                     <navigationItem key="navigationItem" id="x42-x2-FcM"/>
                     <connections>
                         <outlet property="tableView" destination="GI9-Kb-aTz" id="jcS-wM-bCX"/>
@@ -231,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGu-Ey-dlk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1911.2" y="231.63418290854574"/>
+            <point key="canvasLocation" x="1681" y="239"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="KrK-Lm-7Bf">
@@ -250,13 +252,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAL-Bq-DCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="-8"/>
+            <point key="canvasLocation" x="246" y="-109"/>
         </scene>
-        <!--Item-->
+        <!--Dictionary-->
         <scene sceneID="SWM-ZS-EBi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bgA-DA-dde" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cWM-tl-m3U"/>
+                    <tabBarItem key="tabBarItem" title="Dictionary" id="cWM-tl-m3U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4AL-Cf-gdD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     @IBOutlet weak var coordinateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var favButton: UIButton!
     
     var nextTemp = ""
     
@@ -27,12 +28,30 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         SVProgressHUD.show()
 
+        googleMapView.alpha = 0
+        coordinateLabel.alpha = 0
+        cityLabel.alpha = 0
+        locationLabel.alpha = 0
+        favButton.alpha = 0
+        
         self.mapData.change(inUrl: temp)
         self.mapData.downloadData {
             self.updateMap()
             self.UpdateUI()
             SVProgressHUD.dismiss()
+            
+            UIView.animate(withDuration: 2, animations: {
+                self.googleMapView.alpha = 1
+                self.coordinateLabel.alpha = 1
+                self.cityLabel.alpha = 1
+                self.locationLabel.alpha = 1
+                self.favButton.alpha = 1
+            })
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+
     }
 
     func UpdateUI() {
